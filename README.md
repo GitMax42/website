@@ -1,6 +1,17 @@
+<div style="height:200px; display: block; background: red;">
+  <img src="website-speed.png" width="200px" height="200px" alt="Logo" align="right">
 
-<img src="website-speed.png" width="200px" height="200px" alt="Logo" align="right">
-Beside Security, __speed__ one of the most important factors of a successul website!
+Beside Security, **speed** is one of the most important factors of a successul website!
+
+Below are some techniques and tips to optimize your website to make it faster. 
+</div>
+
+
+
+# Check how fast your website is
+* [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+* [GTmetrix](https://gtmetrix.com/)
+* [WebPageTest](https://www.webpagetest.org/)
 
 
 # Static Content
