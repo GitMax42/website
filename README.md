@@ -1,4 +1,4 @@
-<img src="website-speed.png" alt="Logo" align="right">
+<img src="website-speed-150.png" alt="Logo" align="right">
 
 **Website Speed**
 
