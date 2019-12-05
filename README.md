@@ -12,7 +12,7 @@ Below are some tips and techniques to speed up your website.
 
 ---
 
-## Static Content - Compressed
+## Static Compressed Content
 Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static compressed content as possible!
 Textfiles like HTML, CSS, Javascript, Webmanifest and others are good candidates for such static compression.
 
@@ -20,7 +20,7 @@ Textfiles like HTML, CSS, Javascript, Webmanifest and others are good candidates
 * <a href="https://github.com/google/brotli">Brotli</a> is a compression algorithm developed by Google and serves best for text compression. <a href="https://caniuse.com/#feat=brotli" target="_blank">Browser support</a> is already very good!
 If the browser supports Brotli, it will send a "br" the in <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding" target="_blank">accept-encoding</a> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" target="_blank">request header</a>.
 
-* <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed)
+* <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed).
 
 Shellscript to generate .gzip and .br versions of text files:
 ```sh
