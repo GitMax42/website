@@ -4,14 +4,7 @@
 
 Beside Security, **speed** is one of the most important technical factors of a successul website!
 
-Below are some techniques and tips to optimize your website to make it faster.
-
-<br/>
-
-
-
-## Check how fast your website is
-There are a lot of online tools to check how fast your website is, below are my top 3.
+Check how fast your website is:
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 * <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a>
@@ -85,9 +78,6 @@ WebP documentation from Google: https://developers.google.com/speed/webp
 WebP CLI tool documentation from Google: https://developers.google.com/speed/webp/docs/cwebp
 WebP browser support: https://caniuse.com/#search=webp
 
-
-
-https://github.com/ManfredGruber
 
 
 
