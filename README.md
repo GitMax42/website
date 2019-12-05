@@ -1,8 +1,8 @@
-<img src="website-speed.png" width="200px" height="200px" alt="Logo" align="right">
+<img src="website-speed.png" width="150px" height="150px" alt="Logo" align="right">
 
 # Website Speed 
 
-Beside Security, **speed** is one of the most important technical factors of a successul website!
+Beside Security, **speed** is one of the most important technical factors for a successul website!
 Below are some tips and techniques to speed up your website. 
 
 **Check how fast your website is:**
@@ -13,7 +13,7 @@ Below are some tips and techniques to speed up your website.
 ---
 
 ## Static Content - Compressed
-Even it takes longer to update your website and needs a more complex deploy process, you need to generate as much static compressed content as possible!
+Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static compressed content as possible!
 Textfiles like HTML, CSS, Javascript, Webmanifest and others are good candidates for such static compression.
 
 ### Compression
