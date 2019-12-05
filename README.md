@@ -1,7 +1,7 @@
-<div>
+
 <img src="website-speed.png" width="200px" height="200px" alt="Logo" align="right">
-  Beside Security, __speed__ one of the most important factors of a successul website!
-</div>
+Beside Security, __speed__ one of the most important factors of a successul website!
+
 
 # Static Content
 # Serve WebP Images
