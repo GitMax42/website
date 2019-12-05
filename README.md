@@ -3,23 +3,26 @@
 # Website Speed 
 
 Beside Security, **speed** is one of the most important technical factors of a successul website!
+Below are some tips and techniques to speed up your website. 
 
-Check how fast your website is:
+**Check how fast your website is:**
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 * <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a>
 
+---
 
 ## Static Content - Compressed
-Even it takes longer to update your website and it is a more complex deploy process, generate as much static compressed content as possible.
+Even it takes longer to update your website and needs a more complex deploy process, you need to generate as much static compressed content as possible!
+Textfiles like HTML, CSS, Javascript, Webmanifest and others are good candidates for such static compression.
 
 ### Compression
 * <a href="https://github.com/google/brotli">Brotli</a> is a compression algorithm developed by Google and serves best for text compression. <a href="https://caniuse.com/#feat=brotli" target="_blank">Browser support</a> is already very good!
-If the browser supports Brotli, it will send a "br" the in accept-encoding request header.
+If the browser supports Brotli, it will send a "br" the in <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding" target="_blank">accept-encoding</a> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" target="_blank">request header</a>.
 
 * <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed)
 
-
+Shellscript to generate .gzip and .br versions of text files:
 ```sh
 for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o -name "*.webmanifest" \) ); do
         brotli -f ${i}
@@ -27,7 +30,7 @@ for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o 
 done
 ```
 
-Apache config (tested Apache/2.4.x on Ubuntu)
+Apache config (tested Apache/2.4.x on Ubuntu):
 ```conf
 Header append Vary Accept-Encoding
 
@@ -53,7 +56,7 @@ RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz [E=no-gzip,L]
 
 
 
-
+<!--
 Make the Web Faster: 
 Serve WebP Images to Speed Up Your Website
 
@@ -80,18 +83,8 @@ WebP browser support: https://caniuse.com/#search=webp
 
 
 
-
- ToDo: image: fast loading image  for
->
->
->
-> cwebp -m 6 -pass 10 -mt -q 80
-> https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
->
->
->
->
-
+cwebp -m 6 -pass 10 -mt -q 80
+https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
 
 
 
@@ -102,3 +95,6 @@ https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
 
 https://en.wikipedia.org/wiki/WebP
 WebP is an image format employing both lossy and lossless compression. It is currently developed by Google, based on technology acquired with the purchase of On2 Technologies.
+
+-->
+
