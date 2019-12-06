@@ -22,8 +22,9 @@ If the browser supports Brotli, it will send a "br" the in <a href="https://deve
 
 * <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed).
 
-Shellscript to generate .gzip and .br versions of text files:
+Shellscript to generate .gzip and .br versions of files:
 ```sh
+cd [to-the-www-directory]
 for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o -name "*.webmanifest" \) ); do
         brotli -f ${i}
         zopfli --i50 ${i}
