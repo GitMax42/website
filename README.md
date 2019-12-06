@@ -5,16 +5,16 @@
 Beside Security, **speed** is one of the most important technical factors for a successul website!
 Below are some tips and techniques to speed up your website. 
 
-**Check how fast your website is:**
+**How fast is your website?**
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 * <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a>
 
 ---
 
-## Static Compressed Content
-Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static compressed content as possible!
-Textfiles like HTML, CSS, Javascript, Webmanifest and others are good candidates for such static compression.
+## Static Pre-compressed Content
+Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
+Textfiles like HTML, CSS, Javascript and Webmanifest are good candidates for such static compression.
 
 #### Compression
 * <a href="https://github.com/google/brotli">Brotli</a> is a compression algorithm developed by Google and serves best for text compression. <a href="https://caniuse.com/#feat=brotli" target="_blank">Browser support</a> is already very good!
@@ -26,14 +26,30 @@ Shellscript to generate .gzip and .br versions of text files:
 ```sh
 for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o -name "*.webmanifest" \) ); do
         brotli -f ${i}
-        zopfli --i10 ${i}
+        zopfli --i50 ${i}
 done
 ```
 
-Apache config (tested Apache/2.4.x on Ubuntu):
+Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):
 ```conf
-Header append Vary Accept-Encoding
+# Otherwise Content-Language: br is added
+RemoveLanguage .br
 
+# Encoding for Brotli files
+AddEncoding br .br
+
+# Set gzip encoding instead of setting as a Content Type
+RemoveType .gz
+AddEncoding x-gzip .gz
+
+# Mapping foo.suffix.gz or foo.suffix.br => Type
+AddType "text/html" .html.br .htm.br .html.gz .htm.gz
+AddType "text/css" .css.br css.gz
+AddType "text/javascript" .js.br .js.gz
+AddType "application/webmanifest+json" .webmanifest.br .webmanifest.gz
+
+# Proxy configuration
+Header append Vary Accept-Encoding
 RewriteEngine on
 
 RewriteCond %{HTTP:Accept-Encoding} br
@@ -43,8 +59,6 @@ RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.br [E=no-gzip,L]
 RewriteCond %{HTTP:Accept-Encoding} gzip
 RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz -s
 RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz [E=no-gzip,L]
-
-
 ```
 
 
@@ -53,7 +67,7 @@ RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz [E=no-gzip,L]
 
 
 ## Serve WebP Images
-
+coming soon...
 
 
 <!--
