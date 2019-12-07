@@ -1,10 +1,12 @@
 <img src="website-speed-1280x1280.png" width="150" height="150" alt="Logo" align="right">
 
 
-**Table of Contents**
+## Table of Contents
 * [How fast is your website?](#how-fast-is-your-website)
 * [Static Pre-compressed Content](#static-pre-compressed-content)
-* [Serve WebP Images](#serve-webp-images)  
+* [Serve WebP Images](#serve-webp-images)
+* [Minification](#minification)
+
 
 
 
@@ -109,6 +111,11 @@ You can have mod_brotli activated, it will compress the content that is not pre-
 ---
 
 ## Serve WebP Images
+coming soon...
+
+---
+
+## Minification
 coming soon...
 
 
