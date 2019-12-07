@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 minimal_mistakes_skin: "dark"
-description: "aaa bbb description"
 logo: "website-speed-1280x1280.png"
 show_downloads: false
-title: "My Custom Title"
+title: "Website Speed"
+description: "Beside Security, speed is one of the most important technical factors for a successul website! Below are some tips and techniques to speed up your website."
