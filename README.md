@@ -1,6 +1,4 @@
----
-image: website-speed-1280x1280.png
----
+
 
 
 ## How fast is your website?
