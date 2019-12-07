@@ -4,15 +4,12 @@
 ## Table of Contents
 * [How fast is your website?](#how-fast-is-your-website)
 * [Static Pre-compressed Content](#static-pre-compressed-content)
-* [Serve WebP Images](#serve-webp-images)
+* [WebP Images](#webp-images)
 * [Minification](#minification)
 
+<br/>
 
-
-
-
----
-
+<br/>
 
 ## How fast is your website?
 First things first, you need to check the current status of your website. There are a lot of online tools for that, below are my favorits: 
@@ -20,8 +17,9 @@ First things first, you need to check the current status of your website. There 
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 * <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a>
 
----
+<br/>
 
+<br/>
 
 ## Static Pre-compressed Content
 Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
@@ -49,7 +47,7 @@ If the browser supports Brotli, it will send a "br" in the <a href="https://deve
 
 <br>
 
-*Shellscript to generate .gzip and .br versions of files:
+*Shellscript to generate .gzip and .br versions of files:*
 ```bash
 cd [to-the-www-directory]
 for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o -name "*.webmanifest" \) ); do
@@ -59,7 +57,7 @@ done
 ```
 <br>
 
-*Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):
+*Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):*
 ```apache
 # Encoding for Brotli files
 AddEncoding br .br
@@ -108,12 +106,16 @@ RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz [E=no-gzip,L]
 You can have mod_brotli activated, it will compress the content that is not pre-compressed.
 
 
----
+<br/>
 
-## Serve WebP Images
-coming soon...
+<br/>
 
----
+## WebP Images
+Serve WebP Images - coming soon...
+
+<br/>
+
+<br/>
 
 ## Minification
 coming soon...
