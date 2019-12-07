@@ -14,7 +14,7 @@ Below are some tips and techniques to speed up your website.
 
 ## Static Pre-compressed Content
 Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
-Textfiles like HTML, CSS, Javascript and Webmanifest are good candidates for such static compression.
+Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for such static compression.
 
 #### Compression
 * <a href="https://github.com/google/brotli">Brotli</a> is a compression algorithm developed by Google and it's <a href="https://caniuse.com/#feat=brotli" target="_blank">Browser support</a> is already very good!
@@ -24,8 +24,8 @@ If the browser supports Brotli, it will send a "br" in the <a href="https://deve
 
 > *Comparison of compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)*
 
-|     File      | Compression | Size [bytes] |
-|:--------------|:-----------:|-------------:|
+| File | Compression | Size [bytes] |
+|:---|:---:|---:|
 | index.html    |     none    |        68616 |
 | index.html.br |    brotli   |        12691 |
 | index.html.gz |    zopfli   |        14293 |
