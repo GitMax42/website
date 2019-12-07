@@ -1,10 +1,11 @@
 <img src="website-speed-1280x1280.png" width="150" height="150" alt="Logo" align="right">
 
 
-> **Table of Contents**
-* [How fast is your website?](#howfast)  
-* Static Pre-compressed Content
-* Serve WebP Images
+**Table of Contents**
+* [How fast is your website?](#howfast)
+* [Static Pre-compressed Content](#staticcontent)
+* [Serve WebP Images](#webp)  
+
 
 ---
 
@@ -18,6 +19,7 @@ First things first, you need to check the current status of your website. There 
 
 ---
 
+<a name="staticcontent"/>
 ## Static Pre-compressed Content
 Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
 Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for such static compression.
@@ -104,7 +106,7 @@ You can have mod_brotli activated, it will compress the content that is not pre-
 
 
 
-
+<a name="webp"/>
 ## Serve WebP Images
 coming soon...
 
