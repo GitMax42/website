@@ -30,7 +30,7 @@ If the browser supports Brotli, it will send a "br" in the <a href="https://deve
 
 * <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed).
 
-*Comparison of compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)
+*Comparison of compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)*
 
 | File | Compression | Size [bytes] |
 |:---|:---:|---:|
