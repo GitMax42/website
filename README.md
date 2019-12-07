@@ -12,14 +12,13 @@
 <br/>
 
 ## How fast is your website?
-First things first, you need to check the current status of your website. There are a lot of online tools for that, below are my favorits: 
+First things first - check the current status of your website! There are a lot of online tools for that, below are my favorits: 
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 * <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a>
 
 <br/>
 
-<br/>
 
 ## Static Pre-compressed Content
 Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
@@ -108,14 +107,12 @@ You can have mod_brotli activated, it will compress the content that is not pre-
 
 <br/>
 
-<br/>
 
 ## WebP Images
 Serve WebP Images - coming soon...
 
 <br/>
 
-<br/>
 
 ## Minification
 coming soon...
