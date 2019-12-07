@@ -1,5 +1,3 @@
-<img src="website-speed-v2.png" alt="Logo" align="right">
-
 Beside Security, **speed** is one of the most important technical factors for a successul website!
 Below are some tips and techniques to speed up your website. 
 
@@ -47,6 +45,7 @@ done
 <br>
 
 > *Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):*
+
 ```apache
 # Encoding for Brotli files
 AddEncoding br .br
