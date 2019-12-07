@@ -1,6 +1,3 @@
-Beside Security, **speed** is one of the most important technical factors for a successul website!
-Below are some tips and techniques to speed up your website. 
-
 **How fast is your website?**
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
@@ -18,7 +15,7 @@ If the browser supports Brotli, it will send a "br" in the <a href="https://deve
 
 * <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed).
 
-> *Comparison of compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)*
+*Comparison of compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)
 
 | File | Compression | Size [bytes] |
 |:---|:---:|---:|
@@ -34,7 +31,7 @@ If the browser supports Brotli, it will send a "br" in the <a href="https://deve
 
 <br>
 
-> *Shellscript to generate .gzip and .br versions of files:*
+*Shellscript to generate .gzip and .br versions of files:
 ```bash
 cd [to-the-www-directory]
 for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o -name "*.webmanifest" \) ); do
@@ -44,8 +41,7 @@ done
 ```
 <br>
 
-> *Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):*
-
+*Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):
 ```apache
 # Encoding for Brotli files
 AddEncoding br .br
