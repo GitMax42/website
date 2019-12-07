@@ -2,3 +2,4 @@ theme: jekyll-theme-minimal
 minimal_mistakes_skin: "neon"
 logo: "website-speed-1280x1280.png"
 show_downloads: false
+masthead_title: "My Custom Title"
