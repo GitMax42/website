@@ -62,7 +62,7 @@ RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz -s
 RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz [E=no-gzip,L]
 ```
 
-
+You can have mod_brotli activated, it will compress the content that is not pre-compressed.
 
 
 
