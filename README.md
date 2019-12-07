@@ -22,7 +22,7 @@ If the browser supports Brotli, it will send a "br" the in <a href="https://deve
 
 * <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed).
 
-Comparison of Compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)
+> *Comparison of compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)*
 
 |     File      | Compression | Size [bytes] |
 |:--------------|:-----------:|-------------:|
@@ -36,17 +36,19 @@ Comparison of Compression methods (examples from [wien52.at](https://wien52.at/)
 | index.js.br   |    brotli   |        30541 |
 | index.js.gz   |    zopfli   |        33231 |
 
+<br>
 
-Shellscript to generate .gzip and .br versions of files:
-```sh
+> *Shellscript to generate .gzip and .br versions of files:*
+```
 cd [to-the-www-directory]
 for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o -name "*.webmanifest" \) ); do
         brotli -f ${i}
         zopfli --i50 ${i}
 done
 ```
+<br>
 
-Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):
+> *Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):*
 ```conf
 # Encoding for Brotli files
 AddEncoding br .br
@@ -75,13 +77,11 @@ AddEncoding x-gzip .gz
 	Header append Vary Accept-Encoding
 </FilesMatch>
 
-
 # Mapping foo.suffix.gz or foo.suffix.br => Type
 AddType "text/html" .html.br .htm.br .html.gz .htm.gz
 AddType "text/css" .css.br css.gz
 AddType "text/javascript" .js.br .js.gz
 AddType "application/webmanifest+json" .webmanifest.br .webmanifest.gz
-
 
 RewriteEngine on
 
