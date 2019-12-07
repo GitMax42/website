@@ -24,11 +24,12 @@ First things first - check the current status of your website! There are a lot o
 Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
 Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for such static compression.
 
-#### Compression
+### Compression
 * <a href="https://github.com/google/brotli">Brotli</a> is a compression algorithm developed by Google and it's <a href="https://caniuse.com/#feat=brotli" target="_blank">Browser support</a> is already very good!
 If the browser supports Brotli, it will send a "br" in the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding" target="_blank">accept-encoding</a> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" target="_blank">request header</a>.
-
 * <a href="https://github.com/google/zopfli">Zopfli</a> is a compression algorithm for DEFLATE, gzip and zlib formats, developed by Google under the Apache License and it achieves much higher compression than other DEFLATE/zlib implementations (at the expense of speed).
+
+<br/>
 
 *Comparison of compression methods (examples from [wien52.at](https://wien52.at/) 12/2019)*
 
@@ -44,7 +45,7 @@ If the browser supports Brotli, it will send a "br" in the <a href="https://deve
 | index.js.br   |    brotli   |        30541 |
 | index.js.gz   |    zopfli   |        33231 |
 
-<br>
+<br/>
 
 *Shellscript to generate .gzip and .br versions of files:*
 ```bash
