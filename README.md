@@ -2,15 +2,16 @@
 
 
 **Table of Contents**
-* [How fast is your website?](#howfast)
-* [Static Pre-compressed Content](#staticcontent)
-* [Serve WebP Images](#webp)  
+* [How fast is your website?](#how-fast-is-your-website)
+* [Static Pre-compressed Content](#static-pre-compressed-content)
+* [Serve WebP Images](#serve-webp-images)  
+
+
 
 
 ---
 
 
-<a name="howfast"/>
 ## How fast is your website?
 First things first, you need to check the current status of your website. There are a lot of online tools for that, below are my favorits: 
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
@@ -19,7 +20,7 @@ First things first, you need to check the current status of your website. There 
 
 ---
 
-<a name="staticcontent"/>
+
 ## Static Pre-compressed Content
 Even the deploy process is more complex and the update of the website takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
 Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for such static compression.
@@ -105,8 +106,8 @@ RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz [E=no-gzip,L]
 You can have mod_brotli activated, it will compress the content that is not pre-compressed.
 
 
+---
 
-<a name="webp"/>
 ## Serve WebP Images
 coming soon...
 
