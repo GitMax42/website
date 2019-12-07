@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 logo: website-speed-1280.png
+show_downloads: false
+title: aaaTitle
