@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 minimal_mistakes_skin: "dark"
-minimal_mistakes_skin: 
+description: "aaa bbb description"
 logo: "website-speed-1280x1280.png"
 show_downloads: false
-masthead_title: "My Custom Title"
+title: "My Custom Title"
