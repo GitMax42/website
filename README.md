@@ -39,7 +39,7 @@ If the browser supports Brotli, it will send a "br" the in <a href="https://deve
 <br>
 
 > *Shellscript to generate .gzip and .br versions of files:*
-```
+```bash
 cd [to-the-www-directory]
 for i in $(find . -type f \( -name "*.js" -o -name "*.css" -o -name "*.html" -o -name "*.webmanifest" \) ); do
         brotli -f ${i}
@@ -49,7 +49,7 @@ done
 <br>
 
 > *Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):*
-```conf
+```apache
 # Encoding for Brotli files
 AddEncoding br .br
 
