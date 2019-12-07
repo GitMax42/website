@@ -1,3 +1,8 @@
+---
+image: website-speed-1280x1280.png
+---
+
+
 ## How fast is your website?
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
