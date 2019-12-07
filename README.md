@@ -1,7 +1,8 @@
 
-
+<img src="website-speed-1280x1280.png" width="150" height="150" alt="Logo" align="right">
 
 ## How fast is your website?
+First things first, you need to check the current status of your website. There are a lot of online tools for that, below are my favorits: 
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 * <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a>
