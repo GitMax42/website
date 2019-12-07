@@ -33,9 +33,6 @@ done
 
 Configure Apache to serve pre-compressed files if they exisit (tested on Apache/2.4.x, Ubuntu):
 ```conf
-# Otherwise Content-Language: br is added
-RemoveLanguage .br
-
 # Encoding for Brotli files
 AddEncoding br .br
 
@@ -43,14 +40,34 @@ AddEncoding br .br
 RemoveType .gz
 AddEncoding x-gzip .gz
 
+<FilesMatch "\.(css|html|js)\.br$">
+	# Prevent mime module to set brazilian language header (because the file ends with .br)
+	RemoveLanguage .br
+
+	# Set encoding type
+	Header set Content-Encoding br
+
+	# Force proxies to cache brotli & non-brotli files deperate
+	Header append Vary Accept-Encoding
+
+</FilesMatch>
+
+<FilesMatch "\.(css|html|js)\.gz$">
+	# Set encoding type
+	Header set Content-Encoding gzip
+
+	# Force proxies to cache gzip & non-gzip files deperate
+	Header append Vary Accept-Encoding
+</FilesMatch>
+
+
 # Mapping foo.suffix.gz or foo.suffix.br => Type
 AddType "text/html" .html.br .htm.br .html.gz .htm.gz
 AddType "text/css" .css.br css.gz
 AddType "text/javascript" .js.br .js.gz
 AddType "application/webmanifest+json" .webmanifest.br .webmanifest.gz
 
-# Proxy configuration
-Header append Vary Accept-Encoding
+
 RewriteEngine on
 
 RewriteCond %{HTTP:Accept-Encoding} br
