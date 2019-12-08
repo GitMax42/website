@@ -21,7 +21,7 @@ First things first - check the current status of your website! There are a lot o
 
 
 ## Static Pre-compressed Content
-Even the deploy process is more complex and the update of the website will take longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
+Even the deploy process is more complex and every update takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
 Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for such static compression.
 
 ### Compression
