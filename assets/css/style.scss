@@ -3,8 +3,6 @@
 
 @import "{{ site.theme }}";
 
-.main-content {
-  h2 {
-   color: #ff0000;
- }
+.main-content h2 {
+   color: #000;
 }
