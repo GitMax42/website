@@ -161,6 +161,4 @@ WebP is an image format employing both lossy and lossless compression. It is cur
 
 -->
 
----
-[this site as GitHub Page](https://manfredgruber.github.io/website-speed/)
 
