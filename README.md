@@ -1,4 +1,4 @@
-<img src="website-speed-1280x1280.png" width="150" height="150" alt="Logo" align="right">
+<img src="website-speed-1280x1280.png" width="25%" height="25%" alt="Logo" align="right">
 
 
 ## Table of Contents
