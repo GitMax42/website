@@ -16,11 +16,19 @@ a {
     color: #ddd;
     text-decoration: underline;
 }
+a:hover {
+    text-decoration: none;
+    color: #f90;
+}
 
 .main-content .highlight pre, .main-content pre {
    background: #ddd;
 }
 
+.page-header {
+   background-color: #000;
+   background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(17,17,17,1) 100%);
+}
 
 /*
 https://aregsar.com/blog/2019/how-to-customize-your-github-pages-blog-style-in-five-minutes/
