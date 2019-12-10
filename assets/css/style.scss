@@ -13,16 +13,16 @@
 
 #website---speed::before {
     background: url(https://manfredgruber.github.io/website/speed/website-speed-1280x1280.png);
-    display: block;
+    display: inline-block;
     width: 5em;
     height: 5em;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    content:'';
+	vertical-align: middle;
+	content:'';
+	margin-right: 1em;
 }
-
-
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
    color: #ddd;
