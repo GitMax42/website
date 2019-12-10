@@ -25,7 +25,9 @@ First things first - check the current status of your website! There are a lot o
 
 ## Pre-built and Pre-compressed Content
 Even the deploy process is more complex and every update takes longer, you need to generate as much pre-built and pre-compressed content as possible to avoid compressing on every request. When it comes to minimizing the time to first byte, nothing beats pre-built files.
+
 Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for compression.
+
 Remark: the list of Static Site Generators (some for the now very popular [JAMstack](https://www.staticgen.com/) ) is very long but it does not matter how you generate your files - I user vi, zsh, make and perl to be as framework independent as possible.
 
 ### Compression
