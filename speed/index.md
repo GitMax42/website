@@ -28,7 +28,7 @@ Even the deploy process is more complex and every update takes longer, you need 
 
 Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for compression.
 
-Remark: the list of Static Site Generators (some for the now very popular [JAMstack](https://www.staticgen.com/) ) is very long but it does not matter how you generate your files - I user vi, zsh, make and perl to be as framework independent as possible.
+Remark: the list of Static Site Generators (some for the now very popular [JAMstack](https://www.staticgen.com/) ) is very long but it does not matter how you generate your files - I user vi, zsh, make and perl to be as framework independent as possible..
 
 ### Compression
 * <a href="https://github.com/google/brotli">Brotli</a> is a compression algorithm developed by Google and it's <a href="https://caniuse.com/#feat=brotli" target="_blank">Browser support</a> is already very good!
