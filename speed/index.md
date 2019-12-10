@@ -1,5 +1,3 @@
-<img src="website-speed-1280x1280.png" width="25%" height="25%" alt="Logo" align="right">
-
 # Website - Speed
 Beside security, speed is one of the most important technical factors for a successful website! Below are some tips and techniques to speed up your website.
 
