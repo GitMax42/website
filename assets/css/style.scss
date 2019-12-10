@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+.markdown-body h1 {
+    border-bottom: 0;
+}
+
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
    color: #ddd;
    font-weight: bold;
