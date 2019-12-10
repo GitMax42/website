@@ -3,12 +3,12 @@
 # Website - Speed
 Beside security, speed is one of the most important technical factors for a successful website! Below are some tips and techniques to speed up your website.
 
-
+<br/>
 
 ## Table of Contents
 * [How fast is your website?](#how-fast-is-your-website)
-* [Static Pre-compressed Content](#static-pre-compressed-content)
-* [WebP Images](#webp-images)
+* [Pre-built and Pre-compressed Content](#static-pre-compressed-content)
+* [Serve WebP Images](#webp-images)
 * [Minification](#minification)
 
 <br/>
@@ -23,10 +23,10 @@ First things first - check the current status of your website! There are a lot o
 
 <br/>
 
-
-## Static Pre-compressed Content
-Even the deploy process is more complex and every update takes longer, you need to generate as much static pre-compressed content as possible to avoid compressing on every request!
-Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for such static compression.
+## Pre-built and Pre-compressed Content
+Even the deploy process is more complex and every update takes longer, you need to generate as much pre-built and pre-compressed content as possible to avoid compressing on every request. When it comes to minimizing the time to first byte, nothing beats pre-built files.
+Textfiles like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for compression.
+Remark: the list of Static Site Generators (some for the now very popular [JAMstack](https://www.staticgen.com/) ) is very long but it does not matter how you generate your files - I user vi, zsh, make and perl to be as framework independent as possible.
 
 ### Compression
 * <a href="https://github.com/google/brotli">Brotli</a> is a compression algorithm developed by Google and it's <a href="https://caniuse.com/#feat=brotli" target="_blank">Browser support</a> is already very good!
@@ -113,8 +113,8 @@ You can have mod_brotli activated, it will compress the content that is not pre-
 <br/>
 
 
-## WebP Images
-Serve WebP Images - coming soon...
+## Serve WebP Images
+coming soon...
 
 <br/>
 
