@@ -37,15 +37,18 @@ If the browser supports Brotli, it will send a "br" in the <a href="https://deve
 
 | File | Compression | Size [bytes] |
 |:---|:---:|---:|
-| index.html    |     none    |        68616 |
-| index.html.br |    brotli   |        12691 |
-| index.html.gz |    zopfli   |        14293 |
+| index.html    |     none    |        68620 |
+| index.html.gz |     gzip    |        15157 |
+| index.html.gz |    zopfli   |        14312 |
+| index.html.br |    brotli   |        12697 |
 | index.css     |     none    |        22703 |
-| index.css.br  |    brotli   |         4278 |
+| index.css.gz  |     gzip    |         4889 |
 | index.css.gz  |    zopfli   |         4626 |
-| index.js      |     none    |       128443 |
-| index.js.br   |    brotli   |        30541 |
-| index.js.gz   |    zopfli   |        33231 |
+| index.css.br  |    brotli   |         4278 |
+| index.js      |     none    |       128374 |
+| index.js.gz   |     gzip    |        34259 |
+| index.js.gz   |    zopfli   |        33218 |
+| index.js.br   |    brotli   |        30511 |
 
 <br/>
 
