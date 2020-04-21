@@ -151,6 +151,7 @@ The example below shows a typical html picture element:
 This smart way is based on [Content Negotiation](https://en.wikipedia.org/wiki/Content_negotiation) 
 with the big advantage, that you do not need to change anything inside your HTML/CSS.
 Furthermore, it can be used in parallel to the existing images on your site, because this method is transparent for the client (e.g. web-browser).
+You only need to update you web server configuration and generate WebP variants of relevant/needed images.
 
 The example below shows the relevant [Apache web-server](https://httpd.apache.org/) configuration for WebP on [wien52.at](https://wien52.at):
 
