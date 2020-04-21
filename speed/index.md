@@ -120,7 +120,7 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 
 # Serve WebP images
 ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/WebPLogo.svg/200px-WebPLogo.svg.png) [WebP](https://en.wikipedia.org/wiki/WebP) is an image format for lossy and lossless compression, developed by Google and nowadays widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
-WebP files are typically smaller in size compared to other formats at equivalent Structural Similarity Index, so perfect to save lot of bytes on transfer to the browser.
+WebP files are typically smaller in size compared to other formats at equivalent Structural Similarity Index, so perfect to save lot of bytes on transfer to the web-browser.
 
 
 ### How to generate WebP images
@@ -137,7 +137,7 @@ cwebp -m 6 -pass 10 -mt -q 70 image.jpeg -o output.webp
 ```
 
 
-### Usage for websites
+### Serve WebP images
 #### 1. As [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/) [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) / [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
 The example below shows a typical html picture element:
 ```html5
@@ -148,8 +148,10 @@ The example below shows a typical html picture element:
 ```
 
 #### 2. Transparent via Apache mod_rewrite
-This really smart way is based on [Content Negotiation](https://en.wikipedia.org/wiki/Content_negotiation) 
-with the big advantage, that it can be used in parallel to the existing implementation. That means, you do not need to convert all your images at once, as this method is transparent for the client web-browser.
+This smart way is based on [Content Negotiation](https://en.wikipedia.org/wiki/Content_negotiation) 
+with the big advantage, that you do not need to change anything inside your HTML/CSS.
+Furthermore, it can be used in parallel to the existing images on your site, because this method is transparent for the client (e.g. web-browser).
+
 The example below shows the relevant [Apache web-server](https://httpd.apache.org/) configuration for WebP on [wien52.at](https://wien52.at):
 
 ```apache
