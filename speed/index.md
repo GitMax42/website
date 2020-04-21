@@ -140,7 +140,7 @@ cwebp -m 6 -pass 10 -mt -q 70 image.jpeg -o output.webp
 ### Serve WebP images
 #### 1. As HTML [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) / [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
 The example below shows a typical html picture element:
-```html5
+```html
 <picture>
   <source srcset="logo.webp" type="image/webp">
   <img src="logo.png" alt="logo">
