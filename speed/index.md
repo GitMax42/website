@@ -116,36 +116,37 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 
 
 ## Serve WebP images to speed up your website
-WebP is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
+[WebP](https://en.wikipedia.org/wiki/WebP) is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
 Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
 
 ### How to generate WebP images
 There are a different tools/application to generate WebP images, if you like to generate it via CLI, than 
 [Google developers portal](https://developers.google.com/speed/webp/docs/using)
-is the best place.
+is the best place. The example below shows a cwebp call on CLI:
 
 ```sh
-cwebp -m 6 -pass 10 -mt -q 70
+cwebp -m 6 -pass 10 -mt -q 70 image.jpeg -o output.webp
 #       │      │     │    └-> quality
 #       │      │     └-> multithreading for speed improvements
 #       │      └-> maximizing the amount of analysis pass
 #       └-> slowest compression method to get the best compression
 ```
 
-> block quote
-### There are 2 ways using WebP in HTML
-1. As [<img>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) or 
-     [<picture>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within
-     [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
+### There are 2 ways using WebP
+1. As [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/) [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) / [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
 
-##### example for html [<picture>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element:
+##### example for html picture element:
 ```html5
 <picture>
   <source srcset="logo.webp" type="image/webp">
   <img src="logo.png" alt="logo">
 </picture>
 ```
-2. 
+
+2. Transparent via Apache mod_rewrite
+This really smart way is based on [Content Negotiation](https://en.wikipedia.org/wiki/Content_negotiation) 
+with the big advantage, that it can be used in parallel to the existing implementation. That means, you do not need to convert all your images at once, as this method is transparent for the client web-browser.
+The example below shows the relevant [Apache web-server](https://httpd.apache.org/) configuration for WebP on [wien52.at](https://wien52.at):
 
 ```apache
 <IfModule mod_setenvif.c>
@@ -172,29 +173,11 @@ AddType image/webp .webp
 
 <!--
 
-*** Statistik w52 Vergleich aller xxxxx JPEGs mit same Quality Index zu webp
-
-Usage:
-1) as HTML5 picture element
-
-2) transparent, via Apache mod_rewrite
-*** example von w52
-
-
-
-WebP wikipedia documentation: https://en.wikipedia.org/wiki/WebP
-WebP documentation from Google: https://developers.google.com/speed/webp
-
-
-
 
 Content Negotiation.
 https://www.igvita.com/2013/05/01/deploying-webp-via-accept-content-negotiation/
 https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
 
-
-https://en.wikipedia.org/wiki/WebP
-WebP is an image format employing both lossy and lossless compression. It is currently developed by Google, based on technology acquired with the purchase of On2 Technologies.
 
 -->
 
