@@ -1,4 +1,3 @@
-# Website - Speed
 ![image](https://github.com/ManfredGruber/website/blob/master/assets/website-speed-v2.png)
 Beside security, speed is one of the most important technical factors for a successful website! Below are some tips and techniques to speed up your website.
 
@@ -14,7 +13,7 @@ Beside security, speed is one of the most important technical factors for a succ
 
 <br/>
 
-## How fast is your website?
+# How fast is your website?
 First things first - check the current status of your website! There are a lot of online tools for that, below are my favorits: 
 * <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
@@ -22,7 +21,7 @@ First things first - check the current status of your website! There are a lot o
 
 <br/>
 
-## Pre-built and Pre-compressed Content
+# Pre-built and Pre-compressed Content
 Even the deploy process is more complex and every update takes longer, you need to generate as much pre-built and pre-compressed content as possible to avoid compressing on every request. When it comes to minimising the time to first byte, nothing beats pre-built files.
 <br/>Text files like HTML, CSS, Javascript, JSON, XML and Webmanifest are good candidates for compression.
 <br/>The list of Static Site Generators (some for the now very popular [JAMstack](https://www.staticgen.com/) ) is very long but it does not matter how you generate your files - I user [vim](https://www.vim.org/), [zsh](https://en.wikipedia.org/wiki/Z_shell), [make](https://www.gnu.org/software/make/) and [perl](https://www.perl.org/) to be as framework independent as possible.
@@ -115,7 +114,7 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 <br/>
 
 
-## Serve WebP images to speed up your website
+# Serve WebP images
 [WebP](https://en.wikipedia.org/wiki/WebP) is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
 Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
 
@@ -173,6 +172,9 @@ AddType image/webp .webp
 
 <!--
 
+Serve WebP images to speed up your website
+
+
 
 Content Negotiation.
 https://www.igvita.com/2013/05/01/deploying-webp-via-accept-content-negotiation/
@@ -198,6 +200,6 @@ https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
 <br/>
 
 
-## Minification
+# Minification
 coming soon...
 
