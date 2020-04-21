@@ -147,9 +147,9 @@ The example below shows a typical html picture element:
 </picture>
 ```
 
-#### 2. Transparent via Apache mod_rewrite
+#### 2. Transparent via web server configuraton
 This smart way is based on [Content Negotiation](https://en.wikipedia.org/wiki/Content_negotiation) 
-with the big advantage, that you do not need to change anything inside your HTML/CSS.
+with the big advantage, that you **do not need to change anything** inside your HTML/CSS.
 Furthermore, it can be used in parallel to the existing images on your site, because this method is transparent for the client (e.g. web-browser).
 You only need to update you web server configuration and generate WebP variants of relevant/needed images.
 
