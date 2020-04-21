@@ -8,7 +8,7 @@ Beside [Security](https://developer.mozilla.org/en-US/docs/Web/Security), **spee
 ## Table of Contents
 * [How fast is your website?](#how-fast-is-your-website)
 * [Pre-built and Pre-compressed Content](#static-pre-compressed-content)
-* [Serve WebP Images](#webp-images)
+* [Serve WebP Images](#serve-webp-images)
 * [Minification](#minification)
 
 
