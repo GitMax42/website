@@ -3,7 +3,7 @@
 ![image](https://github.com/ManfredGruber/website/blob/master/assets/website-speed-v2.png)
 Beside [Security](https://developer.mozilla.org/en-US/docs/Web/Security), **speed** is one of the most important technical factors for successful websites! Below are some tips and techniques to speed up your website.
 
-<br/>
+<br/><br/>
 
 ## Table of Contents
 * [How fast is your website?](#how-fast-is-your-website)
@@ -11,8 +11,9 @@ Beside [Security](https://developer.mozilla.org/en-US/docs/Web/Security), **spee
 * [Serve WebP Images](#webp-images)
 * [Minification](#minification)
 
-<br/>
-<br/>
+
+<br/><br/>
+
 
 # How fast is your website?
 First things first - check the current status of your website! There are a lot of online tools for that, below are my favorits: 
@@ -20,7 +21,9 @@ First things first - check the current status of your website! There are a lot o
 * <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 * <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a>
 
-<br/>
+
+<br/><br/>
+
 
 # Pre-built and Pre-compressed Content
 Even the deploy process is more complex and every update takes longer, you need to generate as much pre-built and pre-compressed content as possible to avoid compressing on every request. When it comes to minimising the time to first byte, nothing beats pre-built files.
@@ -112,12 +115,14 @@ RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/%{REQUEST_FILENAME}.gz [E=no-gzip,L]
 Remark: you can have mod_brotli activated, it will compress the content that is not pre-compressed.
 
 
-<br/>
+<br/><br/>
 
 
 # Serve WebP images
 [WebP](https://en.wikipedia.org/wiki/WebP) is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
 Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
+
+<br/>
 
 ### How to generate WebP images
 There are a different tools/application to generate WebP images, if you like to generate it via CLI, than 
@@ -132,8 +137,10 @@ cwebp -m 6 -pass 10 -mt -q 70 image.jpeg -o output.webp
 #       └-> slowest compression method to get the best compression
 ```
 
+<br/>
+
 ### There are 2 ways using WebP
-1. As [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/) [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) / [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
+#### 1. As [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/) [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) / [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
 
 ##### example for html picture element:
 ```html5
@@ -167,10 +174,6 @@ The example below shows the relevant [Apache web-server](https://httpd.apache.or
 AddType image/webp .webp
 ```
 
-
-
-
-
 <!--
 
 Serve WebP images to speed up your website
@@ -185,20 +188,7 @@ https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
 -->
 
 
-
-
-
-
-
-
-
-
-
-
-......................................
-
-
-<br/>
+<br/><br/>
 
 
 # Minification
