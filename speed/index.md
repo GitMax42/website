@@ -124,9 +124,9 @@ WebP files are typically smaller in size compared to other formats at equivalent
 
 
 ### How to generate WebP images
-There are a different tools/application to generate WebP images, if you like to generate it via CLI, than 
+There are a different tools/application to generate WebP images, if you need to generate it via CLI, then 
 [Google developers portal](https://developers.google.com/speed/webp/docs/using)
-is the best place. The example below shows a cwebp call on CLI:
+is the best place to look for information. The example below shows a typical conversion:
 
 ```sh
 cwebp -m 6 -pass 10 -mt -q 70 image.jpeg -o output.webp
@@ -137,7 +137,7 @@ cwebp -m 6 -pass 10 -mt -q 70 image.jpeg -o output.webp
 ```
 
 
-### There are 2 ways using WebP
+### Usage for websites
 #### 1. As [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/) [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) / [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
 The example below shows a typical html picture element:
 ```html5
@@ -147,7 +147,7 @@ The example below shows a typical html picture element:
 </picture>
 ```
 
-2. Transparent via Apache mod_rewrite
+#### 2. Transparent via Apache mod_rewrite
 This really smart way is based on [Content Negotiation](https://en.wikipedia.org/wiki/Content_negotiation) 
 with the big advantage, that it can be used in parallel to the existing implementation. That means, you do not need to convert all your images at once, as this method is transparent for the client web-browser.
 The example below shows the relevant [Apache web-server](https://httpd.apache.org/) configuration for WebP on [wien52.at](https://wien52.at):
