@@ -119,7 +119,7 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 
 
 # Serve WebP images
-[WebP](https://en.wikipedia.org/wiki/WebP) is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/WebPLogo.svg/200px-WebPLogo.svg.png) [WebP](https://en.wikipedia.org/wiki/WebP) is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
 Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
 
 
