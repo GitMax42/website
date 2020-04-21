@@ -115,10 +115,38 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 <br/>
 
 
-## Serve WebP Images
-coming soon...
+## Serve WebP images to speed up your website
+WebP is an image format for lossy and lossless compression, developed by Google.
 
-https://caniuse.com/#feat=webp
+WebP is already widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp)
+
+### How to generate WebP images
+There are a different tools/application to generate WebP images. If you like to generate it via CLI, than 
+[Google developers portal](https://developers.google.com/speed/webp/docs/using)
+is the best place.
+
+```sh
+cwebp -m 6 -pass 10 -mt -q 70
+#       │      │     │    └-> quality
+#       │      │     └-> multithreading for speed improvements
+#       │      └-> maximizing the amount of analysis pass
+#       └-> slowest compression method to get the best compression
+```
+
+
+### There are 2 ways using WebP in HTML
+1. As [<img>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) or 
+     [<picture>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within
+     [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
+
+example for html [<picture>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element:
+```html5
+<picture>
+  <source srcset="logo.webp" type="image/webp">
+  <img src="logo.png" alt="logo">
+</picture>
+```
+2. 
 
 ```apache
 <IfModule mod_setenvif.c>
@@ -140,31 +168,16 @@ AddType image/webp .webp
 ```
 
 
-......................................
 
-
-<br/>
-
-
-## Minification
-coming soon...
 
 
 <!--
-Make the Web Faster: 
-Serve WebP Images to Speed Up Your Website
 
-WebP is an image format for lossy and lossless compression, currently developed by Google.
-
-*** example cwebp aufruf
 *** Statistik w52 Vergleich aller xxxxx JPEGs mit same Quality Index zu webp
 
 Usage:
 1) as HTML5 picture element
-<picture>
-  <source srcset="logo.webp" type="image/webp">
-  <img src="logo.png" alt="logo">
-</picture>
+
 2) transparent, via Apache mod_rewrite
 *** example von w52
 
@@ -172,13 +185,7 @@ Usage:
 
 WebP wikipedia documentation: https://en.wikipedia.org/wiki/WebP
 WebP documentation from Google: https://developers.google.com/speed/webp
-WebP CLI tool documentation from Google: https://developers.google.com/speed/webp/docs/cwebp
-WebP browser support: https://caniuse.com/#search=webp
 
-
-
-cwebp -m 6 -pass 10 -mt -q 80
-https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
 
 
 
@@ -191,4 +198,24 @@ https://en.wikipedia.org/wiki/WebP
 WebP is an image format employing both lossy and lossless compression. It is currently developed by Google, based on technology acquired with the purchase of On2 Technologies.
 
 -->
+
+
+
+
+
+
+
+
+
+
+
+
+......................................
+
+
+<br/>
+
+
+## Minification
+coming soon...
 
