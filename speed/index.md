@@ -116,12 +116,11 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 
 
 ## Serve WebP images to speed up your website
-WebP is an image format for lossy and lossless compression, developed by Google.
-
-WebP is already widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp)
+WebP is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
+Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
 
 ### How to generate WebP images
-There are a different tools/application to generate WebP images. If you like to generate it via CLI, than 
+There are a different tools/application to generate WebP images, if you like to generate it via CLI, than 
 [Google developers portal](https://developers.google.com/speed/webp/docs/using)
 is the best place.
 
@@ -133,13 +132,13 @@ cwebp -m 6 -pass 10 -mt -q 70
 #       └-> slowest compression method to get the best compression
 ```
 
-
+> block quote
 ### There are 2 ways using WebP in HTML
 1. As [<img>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) or 
      [<picture>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within
      [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
 
-example for html [<picture>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element:
+##### example for html [<picture>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element:
 ```html5
 <picture>
   <source srcset="logo.webp" type="image/webp">
