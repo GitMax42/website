@@ -1,7 +1,7 @@
 > *Website - Speed*
 
 ![image](https://github.com/ManfredGruber/website/blob/master/assets/website-speed-v2.png)
-Beside security, speed is one of the most important technical factors for a successful website! Below are some tips and techniques to speed up your website.
+Beside [Security](https://developer.mozilla.org/en-US/docs/Web/Security), speed is one of the most important technical factors for a successful website! Below are some tips and techniques to speed up your website.
 
 <br/>
 
@@ -12,7 +12,6 @@ Beside security, speed is one of the most important technical factors for a succ
 * [Minification](#minification)
 
 <br/>
-
 <br/>
 
 # How fast is your website?
