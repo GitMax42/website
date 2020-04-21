@@ -172,17 +172,10 @@ AddType image/webp .webp
 ```
 
 <!--
-🆆🅴🅱🆂🅸🆃🅴 - 🆂🅿🅴🅴🅳 
-Serve WebP images to speed up your website
-
-https://en.wikipedia.org/wiki/WebP is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from https://caniuse.com/#feat=webp
-Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
-
 
 Content Negotiation.
 https://www.igvita.com/2013/05/01/deploying-webp-via-accept-content-negotiation/
 https://medium.com/@vinhlh/how-i-apply-webp-for-optimizing-images-9b11068db349
-
 
 -->
 
