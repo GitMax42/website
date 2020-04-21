@@ -118,6 +118,31 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 ## Serve WebP Images
 coming soon...
 
+https://caniuse.com/#feat=webp
+
+```apache
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "\.(jpe?g|png)$" REQUEST_image
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+  RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header append Vary Accept env=REQUEST_image
+</IfModule>
+
+AddType image/webp .webp
+```
+
+
+......................................
+
+
 <br/>
 
 
