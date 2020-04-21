@@ -122,7 +122,6 @@ Remark: you can have mod_brotli activated, it will compress the content that is 
 [WebP](https://en.wikipedia.org/wiki/WebP) is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from [caniuse](https://caniuse.com/#feat=webp). 
 Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
 
-<br/>
 
 ### How to generate WebP images
 There are a different tools/application to generate WebP images, if you like to generate it via CLI, than 
@@ -137,12 +136,10 @@ cwebp -m 6 -pass 10 -mt -q 70 image.jpeg -o output.webp
 #       └-> slowest compression method to get the best compression
 ```
 
-<br/>
 
 ### There are 2 ways using WebP
 #### 1. As [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/) [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) / [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element, or within [CSS background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image).
-
-##### example for html picture element:
+The example below shows a typical html picture element:
 ```html5
 <picture>
   <source srcset="logo.webp" type="image/webp">
@@ -175,9 +172,11 @@ AddType image/webp .webp
 ```
 
 <!--
-
+🆆🅴🅱🆂🅸🆃🅴 - 🆂🅿🅴🅴🅳 
 Serve WebP images to speed up your website
 
+https://en.wikipedia.org/wiki/WebP is an image format for lossy and lossless compression, developed by Google and widely supported by browsers, as you can see from https://caniuse.com/#feat=webp
+Files are typically smaller in size compared to other formats at equivalent SSIM (Structural similarity) index, so perfect to save some bytes.
 
 
 Content Negotiation.
